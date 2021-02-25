@@ -21,7 +21,7 @@ function getResultingCells(cells, newCell) {
   if (newCell === "alive" && String(cells.slice(-1)) === "alive") {
     return [...cells, newCell, "life"];
   } else if (
-  /* If newly generated cell is 'dead' and previous 2 cell's
+    /* If newly generated cell is 'dead' and previous 2 cell's
     are also 'dead' we need replace 'life' to 'dead' */
     newCell === "dead" &&
     String(cells.slice(-2)) === String(["dead", "dead"]) &&
@@ -29,7 +29,7 @@ function getResultingCells(cells, newCell) {
   ) {
     return [...cells.slice(0, -3), ...["dead", "dead", "dead"], newCell];
   } else {
-  /* If none of the condetion above is met we just add a newly generated cell */
+    /* If none of the condetion above is met we just add a newly generated cell */
     return [...cells, newCell];
   }
 }
