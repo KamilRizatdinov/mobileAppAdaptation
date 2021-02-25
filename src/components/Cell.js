@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "../styles/Cell.css";
 
-function Cell({ cellType }) {
+function Cell({ cellType, lastCell }) {
   function getInnerContent(cellType) {
     const innerContentMap = {
       dead: {
@@ -27,7 +27,7 @@ function Cell({ cellType }) {
   const innerContent = getInnerContent(cellType);
 
   return (
-    <div className={`cell ${cellType}`}>
+    <div className={`cell ${cellType}`} id={lastCell ? "last-cell" : ""}>
       <div className="left">
         <div className="cell_icon">{innerContent["cell_icon"]}</div>
       </div>
@@ -42,6 +42,7 @@ function Cell({ cellType }) {
 
 Cell.propTypes = {
   cellType: PropTypes.oneOf(["dead", "alive", "life"]),
+  isLast: PropTypes.bool,
 };
 
 export default Cell;
