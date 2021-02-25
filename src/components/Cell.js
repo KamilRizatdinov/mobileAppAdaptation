@@ -2,29 +2,25 @@ import PropTypes from "prop-types";
 import "../styles/Cell.css";
 
 function Cell({ cellType, lastCell }) {
-  function getInnerContent(cellType) {
-    const innerContentMap = {
-      dead: {
-        cell_icon: "💀",
-        cell_header: "Мёртвая",
-        cell_description: "или прикидывается",
-      },
-      alive: {
-        cell_icon: "💥",
-        cell_header: "Живая",
-        cell_description: "и шевелится!",
-      },
-      life: {
-        cell_icon: "🐣",
-        cell_header: "Жизнь",
-        cell_description: "Ку-ку!",
-      },
-    };
+  const innerContentMap = {
+    dead: {
+      cell_icon: "💀",
+      cell_header: "Мёртвая",
+      cell_description: "или прикидывается",
+    },
+    alive: {
+      cell_icon: "💥",
+      cell_header: "Живая",
+      cell_description: "и шевелится!",
+    },
+    life: {
+      cell_icon: "🐣",
+      cell_header: "Жизнь",
+      cell_description: "Ку-ку!",
+    },
+  };
 
-    return innerContentMap[cellType];
-  }
-
-  const innerContent = getInnerContent(cellType);
+  const innerContent = innerContentMap[cellType];
 
   return (
     <div className={`cell ${cellType}`} id={lastCell ? "last-cell" : ""}>
