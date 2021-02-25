@@ -1,0 +1,49 @@
+.cell {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  margin: 4px 0;
+
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 40px;
+  height: 40px;
+  margin: 16px;
+}
+
+.right .cell_header {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: 0.0015em;
+}
+
+.right .cell_description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4em;
+  letter-spacing: 0.0025em;
+}
+
+.dead .left {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #0d658a 0%, #b0ffb4 100%);
+}
+
+.alive .left {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffb800 0%, #fff7b0 100%);
+}
+
+.life .left {
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ad00ff 0%, #ffb0e9 100%);
+}
