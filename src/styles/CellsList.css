@@ -4,3 +4,14 @@
 
   overflow-y: auto;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cells-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cells-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
