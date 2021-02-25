@@ -4,11 +4,11 @@ import Cell from "./Cell";
 import "../styles/CellsList.css";
 
 function CellsList() {
-  const cells = useSelector((state) => state.cells);
-
   useEffect(function(){
     document.getElementById('last-cell')?.scrollIntoView()
   });
+  
+  const cells = useSelector((state) => state.cells);
 
   return (
     <div className="cells-list">
